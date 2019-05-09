@@ -1,7 +1,7 @@
 let questionNumber = 0;
 let score = 0;
 
-//Generate question HTML
+//Generate questions in  HTML
 function generateQuestion(){
   if(questionNumber < STORE.length){
     return `<div class="question-${questionNumber}">
@@ -35,13 +35,13 @@ function generateQuestion(){
   }
 }
 
-//increment question number
+//increment the question number at the top of the page
  function changeQuestionNumber(){
    questionNumber ++;
    $('.questionNumber').text(questionNumber+1);
  }
 
-//increment score
+//increment the score
 function changeScore(){
    score ++;
  }
@@ -64,7 +64,7 @@ function renderQuestion(){
   $('.questionAnswerForm').html(generateQuestion());
 }
 
-//unser selects answer on submit run user feedback
+//user selects answer on submit run user feedback
 function userSelectAnswer(){
   $('form').on('submit', function(event){
     event.preventDefault();
